@@ -1,0 +1,97 @@
+@import '../../assets/scss/variables/colors';
+@import '../../assets/scss/variables/typography';
+@import '../../assets/scss/mixins/responsive';
+@import '../../assets/scss/mixins/border-radius';
+
+$xs: 0.3125rem; //5px
+$sm: 0.625rem;; //10px
+$md: 0.9375rem; //15px
+$lg: 1.25rem; //20px
+$xl: 1.875rem; //30px
+
+$todo-border-color: $line-color;
+$todo-item-border-color: $light-color;
+$add-btn-bg: $blue;
+$add-btn-text-color: $white;
+$complete-btn-bg: $success;
+$unComplete-btn-bg: $disabled;
+$complete-btn-text-color: $white;
+$delete-btn-bg: $text-color;
+$delete-btn-text-color: $white;
+
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  padding: $lg;
+  border: solid 1px $todo-border-color;
+  @include border-radius(10px);
+  @include tablet(){
+    background: $red;
+  }
+
+  &-add {
+    display: flex;
+  }
+  &-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: $xl;
+  }
+  &-listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $sm 0;
+    border-bottom: solid 1px $todo-item-border-color;
+    &.-isCompleted {
+      .todo-itemName {
+        text-decoration: line-through;
+        font-style: italic;
+      }
+      .todo-completeBtn {
+        background-color: $unComplete-btn-bg;
+      }
+    }
+    &:last-child {
+      border: 0;
+    }
+  }
+  
+
+  &-addInput {
+    width: 100%;
+    padding: $md;
+    @include border-radius(10px);
+    border: solid 2px $todo-border-color;
+  }
+  &-addBtn {
+    @include border-radius(10px);
+    background-color: $add-btn-bg;
+    color: $add-btn-text-color;
+    margin-left: $md;
+    padding: $md;
+    border: 0;
+    cursor: pointer;
+  }
+  &-completeBtn {
+    @include border-radius(4px);
+    background-color: $complete-btn-bg;
+    color: $complete-btn-text-color;
+    font-size: $fs-14;
+    margin-right: $sm;
+    padding: $xs $sm;
+    border: 0;
+    cursor: pointer;
+    
+  }
+  &-deleteBtn {
+    @include border-radius(4px);
+    background-color: $delete-btn-text-color;
+    color: $delete-btn-bg;
+    font-size: $fs-16;
+    padding: $xs $sm;
+    border: 0;
+    cursor: pointer;
+  }
+}

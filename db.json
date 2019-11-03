@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": "239df441-eac7-477a-88f6-1d7c7461f632",
+      "name": "test 1",
+      "isComplete": true
+    },
+    {
+      "id": "d22c16be-792d-4023-9ae3-8b2cd1a43929",
+      "name": "test 2",
+      "isComplete": true
+    },
+    {
+      "id": "2e48fb4a-ccda-41ac-ba34-868aae79d885",
+      "name": "test 3",
+      "isComplete": false
+    },
+    {
+      "id": "77bb0dd1-4107-471c-a1f9-1c620cb5ff30",
+      "name": "test 4",
+      "isComplete": false
+    }
+  ]
+}
