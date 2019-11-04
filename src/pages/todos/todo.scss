@@ -26,10 +26,9 @@ $delete-btn-text-color: $white;
   padding: $lg;
   border: solid 1px $todo-border-color;
   @include border-radius(10px);
-  @include tablet(){
-    background: $red;
+  @include mobile(){
+    margin: 10px;
   }
-
   &-add {
     display: flex;
   }

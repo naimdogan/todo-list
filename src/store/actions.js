@@ -1,6 +1,6 @@
 
 import axios from "../axios/axios";
-import { TODO_STARTED, TODO_ERROR, ADD_TODO, TODO_LIST, TOGGLE_TODO, DELETE_TODO, ACTIVE_TODO, COMPLETE_TODO, ALL_TODO } from './types';
+import { TODO_STARTED, TODO_ERROR, ADD_TODO, TODO_LIST, TOGGLE_TODO, DELETE_TODO } from './types';
 
 const apiUrl ="/todos";
 
@@ -81,18 +81,3 @@ export const toggleTodoAction = (todoID, todo) => {
           }));
      }
  };
-
- export const allTodos = (todos) => ({
-    type: ALL_TODO,
-    todos
-});
-
- export const activeTodos = (todos) => ({
-    type: ACTIVE_TODO,
-    todos
-});
-
-export const completeTodos = (todos) => ({
-    type: COMPLETE_TODO,
-    todos
-});

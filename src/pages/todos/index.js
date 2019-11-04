@@ -3,11 +3,11 @@ import AddTodo from "../../components/todos/addTodo"
 import TodoItems from "../../components/todos/todoItems"
 import './todo.scss'
 
-function Todos() {
+function Todos(params) {
     return (
         <div className="todo">
             <AddTodo />
-            <TodoItems />
+            <TodoItems filter={params.filter || 'all'} />
         </div>
     )
 }

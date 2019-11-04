@@ -4,6 +4,3 @@ export const TODO_STARTED = 'TODO_STARTED';
 export const TODO_ERROR = 'TODO_ERROR';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 export const DELETE_TODO = 'DELETE_TODO';
-export const ACTIVE_TODO = 'ACTIVE_TODO';
-export const COMPLETE_TODO = 'COMPLETE_TODO';
-export const ALL_TODO = 'ALL_TODO'
